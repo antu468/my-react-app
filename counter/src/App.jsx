@@ -14,9 +14,13 @@ function App() {
 
 
   const addvalue=()=>{
-    console.log("clicked", counter);
+    //console.log("clicked", counter);
     //counter = counter+1
     setCounter(counter+1)
+  }
+
+  const removevalue=()=>{
+    setCounter(counter-1)
   }
   return (
     <>
@@ -27,7 +31,10 @@ function App() {
       onClick={addvalue}
       >Add Value</button>
       <br/>
-      <button>Decrease Value</button>
+      <button
+      onClick = {removevalue}
+      
+      >Decrease Value</button>
     </>
   )
 
